@@ -1,15 +1,17 @@
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class TestaListagem {
+public class SelectStatement {
     public static void main(String[] args) throws SQLException {
         ConnectionFactory connectionFactory = new ConnectionFactory();
         Connection connection = connectionFactory.getConnection();
 
-        Statement statement = connection.createStatement();
-        statement.execute("SELECT * FROM PRODUTO");
+        PreparedStatement statement = createPreparedStatement();
+        statement.execute();
+
         ResultSet result = statement.getResultSet();
 
         while (result.next()) {
@@ -22,5 +24,15 @@ public class TestaListagem {
         }
 
         connection.close();
+    }
+
+    private static PreparedStatement createPreparedStatement() throws SQLException {
+        ConnectionFactory connectionFactory = new ConnectionFactory();
+        Connection connection = connectionFactory.getConnection();
+
+        PreparedStatement statement = connection.prepareStatement("SELECT * FROM PRODUTO",
+                Statement.RETURN_GENERATED_KEYS);
+
+        return statement;
     }
 }
