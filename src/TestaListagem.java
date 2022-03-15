@@ -17,8 +17,8 @@ public class TestaListagem {
             System.out.println(id);
             String nome = result.getString("nome");
             System.out.println(nome);
-            String descricao = result.getString("descricao");
-            System.out.println(descricao);
+            String description = result.getString("descricao");
+            System.out.println(description);
         }
 
         connection.close();

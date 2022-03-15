@@ -15,7 +15,7 @@ public class TestaInsercao {
 
         while (result.next()) {
             Integer id = result.getInt(1);
-            System.out.println("O id criado foi: " + id);
+            System.out.println("ID " + id + " created.");
         }
     }
 }
