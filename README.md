@@ -1,18 +1,9 @@
-## Getting Started
+## JDBC
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Repositório referente a estudos básicos relacionados ao Java Database Connectivity.
 
-## Folder Structure
+## Comandos Básicos
 
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- `Delete`: DELETE FROM table_name WHERE condition;
+- `Insert`: INSERT INTO table_name (column1, column2, column3, ...) VALUES (value1, value2, value3, ...);
+- `Select`: SELECT * FROM table_name;
